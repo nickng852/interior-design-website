@@ -1,0 +1,32 @@
+{
+  "name": "interior-design-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.1",
+    "emailjs-com": "^2.6.4",
+    "gsap": "^3.11.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.4.0",
+    "react-parallax": "^3.5.1",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.55.0",
+    "styled-components": "^5.3.5",
+    "swiper": "^6.4.15"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "vite": "^3.1.3"
+  }
+}

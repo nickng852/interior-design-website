@@ -1,0 +1,50 @@
+// Swiper Styles
+.swiper-pagination-bullet {
+  background-color: #0d0d0d;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 100% 5% 100% 2%;
+  color: #fff;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all ease 0.2s;
+
+  // Large devices (desktops, less than 1200px)
+  @media (max-width: 1199.98px) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 100% 2% 100% 5%;
+  color: #fff;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all ease 0.2s;
+
+  // Large devices (desktops, less than 1200px)
+  @media (max-width: 1199.98px) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
