@@ -9,7 +9,7 @@ import { images } from "../components/ShowcaseData";
 import Partnership from "../components/Partnership";
 import { logos } from "../components/PartnershipData";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Slideshow slides={slides} />
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

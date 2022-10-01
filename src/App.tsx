@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import GlobalStyle from "./components/styles/GlobalStyle";
 import Navbar from "./components/navbar/Navbar";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/buttons/ScrollToTopButton";
 
@@ -15,19 +15,13 @@ const App = () => {
   };
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <GlobalStyle />
-
       <Navbar toggle={toggle} onClick={handleToggle} />
-
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-      </Switch>
-
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
       <Footer />
-
       <ScrollToTopButton />
     </Router>
   );

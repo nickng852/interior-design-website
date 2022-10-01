@@ -27,11 +27,9 @@ const ScrollToTopBtn: FC<Props> = () => {
   window.addEventListener("scroll", btnShow);
 
   return (
-    <>
-      <Button showBtn={showBtn} onClick={scrollToTop}>
-        <HiOutlineChevronUp />
-      </Button>
-    </>
+    <Button showBtn={showBtn} onClick={scrollToTop}>
+      <HiOutlineChevronUp />
+    </Button>
   );
 };
 

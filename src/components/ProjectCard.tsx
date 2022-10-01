@@ -30,7 +30,7 @@ const ProjectCard: FC<Props> = ({ projects }) => {
     <Main>
       <Wrapper>
         <SectionTitle data-aos="fade-up" data-aos-duration="1000">
-          <p>- Projects -</p>
+          <p>Projects</p>
         </SectionTitle>
 
         <CardWrapper>

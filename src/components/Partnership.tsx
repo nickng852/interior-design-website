@@ -19,7 +19,7 @@ const Partnership: FC<Props> = ({ logos }) => {
     <Main>
       <Wrapper>
         <SectionTitle data-aos="fade-up" data-aos-duration="1000">
-          <p>- Partnered with -</p>
+          <p>Partnered with</p>
         </SectionTitle>
 
         <LogoWrapper

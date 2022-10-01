@@ -31,7 +31,7 @@ const Showcase: FC<Props> = ({ images }) => {
     <Main>
       <Wrapper>
         <SectionTitle data-aos="fade-up" data-aos-duration="1000">
-          <p>- Showcase -</p>
+          <p>Showcase</p>
         </SectionTitle>
 
         <SwiperWrapper data-aos="fade" data-aos-duration="1000">
