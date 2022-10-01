@@ -61,9 +61,9 @@ const Slideshow: FC<Props> = ({ slides }) => {
         speed={2500}
         allowTouchMove={false}
       >
-        {slides.map((slide, index) => {
+        {slides.map((slide) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={slide.id}>
               <SwiperImg src={slide.image} />
             </SwiperSlide>
           );

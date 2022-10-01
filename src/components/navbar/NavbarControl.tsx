@@ -1,12 +1,9 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-interface Props {
-  toggle?: boolean;
-  onClick?: () => void;
-}
+import { IToggle } from "../../interfaces/toggle";
 
-const NavbarControl: FC<Props> = ({ toggle, onClick }) => {
+const NavbarControl: FC<IToggle> = ({ toggle, onClick }) => {
   return (
     <Wrapper toggle={toggle} onClick={onClick}>
       <div></div>
@@ -14,7 +11,7 @@ const NavbarControl: FC<Props> = ({ toggle, onClick }) => {
   );
 };
 
-const Wrapper = styled.div<Props>`
+const Wrapper = styled.div<IToggle>`
   padding: 1rem;
   display: flex;
   align-items: center;

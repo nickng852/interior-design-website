@@ -2,11 +2,9 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface Props {
-  onClick?: () => void;
-}
+import { IToggle } from "../../interfaces/toggle";
 
-const Sidebar: FC<Props> = ({ onClick }) => {
+const Sidebar: FC<IToggle> = ({ onClick }) => {
   return (
     <Menu>
       <Link to="/" onClick={onClick}>

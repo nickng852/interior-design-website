@@ -15,7 +15,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 type IImages = {
-  src: string;
+  id: string;
+  image: string;
 }[];
 
 interface Props {
@@ -54,10 +55,10 @@ const Showcase: FC<Props> = ({ images }) => {
             }}
             loop={true}
           >
-            {images.map((image, index) => {
+            {images.map((image) => {
               return (
-                <SwiperSlide key={index}>
-                  <SwiperImg src={image.src} />
+                <SwiperSlide key={image.id}>
+                  <SwiperImg src={image.image} />
                 </SwiperSlide>
               );
             })}

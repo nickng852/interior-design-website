@@ -2,12 +2,9 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-interface Props {
-  toggle?: boolean;
-  onClick?: () => void;
-}
+import { IToggle } from "../../interfaces/toggle";
 
-const NavbarLogo: FC<Props> = ({ toggle }) => {
+const NavbarLogo: FC<IToggle> = ({ toggle }) => {
   const scrollTopTop = () => {
     window.scrollTo(0, 0);
   };
@@ -21,7 +18,7 @@ const NavbarLogo: FC<Props> = ({ toggle }) => {
   );
 };
 
-const Logo = styled.div<Props>`
+const Logo = styled.div<IToggle>`
   font-family: "Jost", sans-serif;
   font-size: 1rem;
   color: ${({ toggle }) => (toggle ? "#000000" : "#ffffff")};

@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Aos from "aos";
 
 type ILogos = {
-  src: string;
+  id: string;
+  image: string;
 }[];
 
 interface Props {
@@ -27,8 +28,8 @@ const Partnership: FC<Props> = ({ logos }) => {
           data-aos-duration="1000"
           data-aos-delay="400"
         >
-          {logos.map((logo, index) => {
-            return <Logo key={index} src={logo.src} />;
+          {logos.map((logo) => {
+            return <Logo key={logo.id} src={logo.image} />;
           })}
         </LogoWrapper>
       </Wrapper>

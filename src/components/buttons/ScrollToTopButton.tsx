@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import styled from "styled-components";
+
 import { HiOutlineChevronUp } from "react-icons/hi";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const ScrollToTopBtn: FC<Props> = () => {
+const ScrollToTopButton: FC<Props> = () => {
   const [showBtn, setShowBtn] = useState<boolean>(false);
 
   const btnShow = () => {
@@ -76,4 +77,4 @@ const Button = styled.div<Props>`
   }
 `;
 
-export default ScrollToTopBtn;
+export default ScrollToTopButton;

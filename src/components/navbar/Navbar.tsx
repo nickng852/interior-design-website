@@ -1,15 +1,13 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+
+import { IToggle } from "../../interfaces/toggle";
+
 import NavbarLogo from "./NavbarLogo";
 import NavbarControl from "./NavbarControl";
 import Sidebar from "./Sidebar";
 
-interface Props {
-  toggle?: boolean;
-  onClick?: () => void;
-}
-
-const Navbar: FC<Props> = ({ toggle, onClick }) => {
+const Navbar: FC<IToggle> = ({ toggle, onClick }) => {
   return (
     <>
       <Main>
@@ -26,7 +24,7 @@ const Navbar: FC<Props> = ({ toggle, onClick }) => {
   );
 };
 
-const Main = styled.section<Props>`
+const Main = styled.section<IToggle>`
   position: fixed;
   padding: 1rem;
   width: 100%;

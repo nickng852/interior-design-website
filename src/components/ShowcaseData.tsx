@@ -11,33 +11,43 @@ import image10 from "../assets/images/M23a.jpg";
 
 export const images = [
   {
-    src: image1,
+    id: "1",
+    image: image1,
   },
   {
-    src: image2,
+    id: "2",
+    image: image2,
   },
   {
-    src: image3,
+    id: "3",
+    image: image3,
   },
   {
-    src: image4,
+    id: "4",
+    image: image4,
   },
   {
-    src: image5,
+    id: "5",
+    image: image5,
   },
   {
-    src: image6,
+    id: "6",
+    image: image6,
   },
   {
-    src: image7,
+    id: "7",
+    image: image7,
   },
   {
-    src: image8,
+    id: "8",
+    image: image8,
   },
   {
-    src: image9,
+    id: "9",
+    image: image9,
   },
   {
-    src: image10,
+    id: "10",
+    image: image10,
   },
 ];

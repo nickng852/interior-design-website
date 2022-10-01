@@ -6,18 +6,23 @@ import image5 from "../assets/images/Logo/logo5.png";
 
 export const logos = [
   {
-    src: image1,
+    id: "1",
+    image: image1,
   },
   {
-    src: image2,
+    id: "2",
+    image: image2,
   },
   {
-    src: image3,
+    id: "3",
+    image: image3,
   },
   {
-    src: image4,
+    id: "3",
+    image: image4,
   },
   {
-    src: image5,
+    id: "5",
+    image: image5,
   },
 ];
