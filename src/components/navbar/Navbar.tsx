@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import { IToggle } from "../../interfaces/toggle";
@@ -8,11 +9,26 @@ import NavbarControl from "./NavbarControl";
 import Sidebar from "./Sidebar";
 
 const Navbar: FC<IToggle> = ({ toggle, onClick }) => {
+  const [isHomePage, setIsHomePage] = useState<boolean>(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setIsHomePage(true);
+    } else {
+      setIsHomePage(false);
+    }
+  }, [location]);
+
   return (
     <>
       <Main>
-        <NavbarLogo toggle={toggle} />
-        <NavbarControl toggle={toggle} onClick={onClick} />
+        <NavbarLogo isHomePage={isHomePage} toggle={toggle} />
+        <NavbarControl
+          isHomePage={isHomePage}
+          toggle={toggle}
+          onClick={onClick}
+        />
       </Main>
 
       {toggle && (

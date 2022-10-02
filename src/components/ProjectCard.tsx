@@ -34,13 +34,9 @@ const ProjectCard: FC<Props> = ({ projects }) => {
         </SectionTitle>
 
         <CardWrapper>
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             return (
-              <Card
-                key={project.id}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
+              <Card key={index} data-aos="fade-up" data-aos-duration="1000">
                 <Link to={`/project/${project.id}`}>
                   <CardImgWrapper>
                     <CardImg src={project.thumbnailImage} />

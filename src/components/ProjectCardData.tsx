@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 import Image1 from "../assets/images/woodshelf/pexels-max-vakhtbovych-6782567.jpg";
 import Image1a from "../assets/images/woodshelf/pexels-max-vakhtbovych-6782567 (1).jpg";
 import Image1b from "../assets/images/woodshelf/pexels-max-vakhtbovych-6782581 (1).jpg";
@@ -27,7 +29,7 @@ import Image9a from "../assets/images/M9a.jpg";
 
 export const projects = [
   {
-    id: "1",
+    id: uuidv4(),
     thumbnailImage: Image1,
     showcaseImage1: Image1a,
     showcaseImage2: Image1b,
@@ -43,7 +45,7 @@ export const projects = [
   },
 
   {
-    id: "2",
+    id: uuidv4(),
     thumbnailImage: Image2,
     showcaseImage1: Image2a,
     showcaseImage2: Image2b,
@@ -59,7 +61,7 @@ export const projects = [
   },
 
   {
-    id: "3",
+    id: uuidv4(),
     thumbnailImage: Image3,
     showcaseImage1: Image3a,
     showcaseImage2: Image1b,
@@ -75,7 +77,7 @@ export const projects = [
   },
 
   {
-    id: "4",
+    id: uuidv4(),
     thumbnailImage: Image4,
     showcaseImage1: Image4a,
     showcaseImage2: Image1b,
@@ -91,7 +93,7 @@ export const projects = [
   },
 
   {
-    id: "5",
+    id: uuidv4(),
     thumbnailImage: Image5,
     showcaseImage1: Image5a,
     showcaseImage2: Image1b,
@@ -107,7 +109,7 @@ export const projects = [
   },
 
   {
-    id: "6",
+    id: uuidv4(),
     thumbnailImage: Image6,
     showcaseImage1: Image6a,
     showcaseImage2: Image1b,
@@ -123,7 +125,7 @@ export const projects = [
   },
 
   {
-    id: "7",
+    id: uuidv4(),
     thumbnailImage: Image7,
     showcaseImage1: Image7a,
     showcaseImage2: Image1b,
@@ -139,7 +141,7 @@ export const projects = [
   },
 
   {
-    id: "8",
+    id: uuidv4(),
     thumbnailImage: Image8,
     showcaseImage1: Image8a,
     showcaseImage2: Image1b,
@@ -155,7 +157,7 @@ export const projects = [
   },
 
   {
-    id: "9",
+    id: uuidv4(),
     thumbnailImage: Image9,
     showcaseImage1: Image9a,
     showcaseImage2: Image1b,

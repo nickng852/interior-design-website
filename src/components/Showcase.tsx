@@ -55,9 +55,9 @@ const Showcase: FC<Props> = ({ images }) => {
             }}
             loop={true}
           >
-            {images.map((image) => {
+            {images.map((image, index) => {
               return (
-                <SwiperSlide key={image.id}>
+                <SwiperSlide key={index}>
                   <SwiperImg src={image.image} />
                 </SwiperSlide>
               );

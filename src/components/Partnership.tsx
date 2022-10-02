@@ -28,8 +28,8 @@ const Partnership: FC<Props> = ({ logos }) => {
           data-aos-duration="1000"
           data-aos-delay="400"
         >
-          {logos.map((logo) => {
-            return <Logo key={logo.id} src={logo.image} />;
+          {logos.map((logo, index) => {
+            return <Logo key={index} src={logo.image} />;
           })}
         </LogoWrapper>
       </Wrapper>
