@@ -23,21 +23,11 @@ const Sidebar: FC<IToggle> = ({ onClick }) => {
         </MenuItem>
       </Link>
 
-      <Link to="/service" onClick={onClick}>
+      <Link to="/" onClick={onClick}>
         <MenuItem
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="300"
-        >
-          Service
-        </MenuItem>
-      </Link>
-
-      <Link to="/jobreference" onClick={onClick}>
-        <MenuItem
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-delay="450"
         >
           Project
         </MenuItem>
@@ -47,7 +37,7 @@ const Sidebar: FC<IToggle> = ({ onClick }) => {
         <MenuItem
           data-aos="fade-right"
           data-aos-duration="1000"
-          data-aos-delay="600"
+          data-aos-delay="450"
         >
           Contact
         </MenuItem>

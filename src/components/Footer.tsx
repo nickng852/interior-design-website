@@ -40,11 +40,14 @@ const Credit = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-size: 0.75rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 200;
   letter-spacing: 0.025rem;
 
   @media (min-width: 992px) {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 300;
   }
 `;
 
