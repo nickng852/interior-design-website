@@ -9,18 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "aos": "^2.3.4",
-    "emailjs-com": "^2.6.4",
     "gsap": "^3.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.4.1",
+    "react-scroll-parallax": "^3.3.1",
     "sass": "^1.55.0",
     "styled-components": "^5.3.5",
     "swiper": "^8.4.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vite-plugin-environment": "^1.1.2"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
