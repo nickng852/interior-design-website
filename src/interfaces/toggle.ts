@@ -1,5 +1,6 @@
 export interface IToggle {
-  isHomePage?: boolean;
+  isNavbarDark?: boolean;
+  navbarTransition?: boolean;
   toggle?: boolean;
   onClick?: () => void;
 }

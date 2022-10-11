@@ -3,10 +3,15 @@ import styled from "styled-components";
 
 import { IToggle } from "../../interfaces/toggle";
 
-const NavbarControl: FC<IToggle> = ({ isHomePage, toggle, onClick }) => {
+const NavbarControl: FC<IToggle> = ({
+  isNavbarDark,
+  navbarTransition,
+  toggle,
+  onClick,
+}) => {
   return (
-    <Wrapper isHomePage={isHomePage} toggle={toggle} onClick={onClick}>
-      <div></div>
+    <Wrapper isNavbarDark={isNavbarDark} toggle={toggle} onClick={onClick}>
+      <div className={navbarTransition ? "control-active" : ""}></div>
     </Wrapper>
   );
 };
@@ -41,8 +46,8 @@ const Wrapper = styled.div<IToggle>`
       position: absolute;
       width: 22.5px;
       height: 2px;
-      background-color: ${({ isHomePage, toggle }) =>
-        isHomePage && !toggle ? "#ffffff" : "#000000"};
+      background-color: ${({ isNavbarDark, toggle }) =>
+        isNavbarDark || toggle ? "#000000" : "#ffffff"};
       border-radius: 35px;
       transition: all 0.3s ease;
 

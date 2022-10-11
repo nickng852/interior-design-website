@@ -4,14 +4,22 @@ import styled from "styled-components";
 
 import { IToggle } from "../../interfaces/toggle";
 
-const NavbarLogo: FC<IToggle> = ({ isHomePage, toggle }) => {
+const NavbarLogo: FC<IToggle> = ({
+  isNavbarDark,
+  navbarTransition,
+  toggle,
+}) => {
   const scrollTopTop = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <Link to="/" onClick={scrollTopTop}>
-      <Logo isHomePage={isHomePage} toggle={toggle}>
+      <Logo
+        isNavbarDark={isNavbarDark}
+        toggle={toggle}
+        className={navbarTransition ? "logo-active" : ""}
+      >
         Renovate <span>Interior Design</span>
       </Logo>
     </Link>
@@ -21,8 +29,8 @@ const NavbarLogo: FC<IToggle> = ({ isHomePage, toggle }) => {
 const Logo = styled.div<IToggle>`
   font-family: "Jost", sans-serif;
   font-size: 1rem;
-  color: ${({ isHomePage, toggle }) =>
-    isHomePage && !toggle ? "#ffffff" : "#000000"};
+  color: ${({ isNavbarDark, toggle }) =>
+    isNavbarDark || toggle ? "#000000" : "#ffffff"};
   transition: all 0.3s ease;
 
   span {

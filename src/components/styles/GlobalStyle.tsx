@@ -17,6 +17,17 @@ a {
   text-decoration: none;
 }
 
+.logo-active {
+  color: #353b48 !important;
+}
+
+.control-active {
+   ::before,
+    ::after {
+      background-color: #353b48 !important;
+    }
+}
+
 // Swiper Styles
 .swiper-pagination-bullet {
   background-color: #0d0d0d;
