@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 // import Swiper core and required modules
 import { Autoplay, EffectFade } from "swiper";
@@ -56,9 +56,9 @@ const Slideshow: FC<Props> = ({ slides }) => {
 
       <Swiper
         modules={[Autoplay, EffectFade]}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         effect={"fade"}
-        speed={2500}
+        speed={2000}
         allowTouchMove={false}
       >
         {slides.map((slide, index) => {
@@ -104,15 +104,30 @@ const SwiperText = styled.div`
     }
 
     @media (min-width: 1200px) {
-      font-size: 1.4em;
+      font-size: 1.4rem;
     }
   }
+`;
+
+const slideZoom = keyframes`
+0% {
+  transform: scale(1.1);
+}
+50% { 
+  transform: scale(1);
+}
+100% {
+  transform: scale(1.1);
+}
 `;
 
 const SwiperImg = styled.img`
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  transform: scale(1.1);
+  animation: ${slideZoom} 21s cubic-bezier(0.42, 0, 0.58, 1) infinite forwards;
+  animation-delay: 2s;
 `;
 
 export default Slideshow;
