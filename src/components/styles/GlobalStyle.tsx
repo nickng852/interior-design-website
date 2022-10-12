@@ -35,7 +35,7 @@ a {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #fff;
+  background-color: #ffffff;
   opacity: 1;
 }
 
@@ -46,9 +46,11 @@ a {
     position: absolute;
     top: 50%;
     left: 0;
-    padding: 100% 5% 100% 2%;
-    display: block;
-    color: #fff;
+    padding: 100% 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
     transform: translateY(-50%);
     opacity: 0;
     transition: all ease 0.2s;
@@ -66,9 +68,11 @@ a {
     position: absolute;
     top: 50%;
     right: 0;
-    padding: 100% 2% 100% 5%;
-    display: block;
-    color: #fff;
+    padding: 100% 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
     transform: translateY(-50%);
     opacity: 0;
     transition: all ease 0.2s;

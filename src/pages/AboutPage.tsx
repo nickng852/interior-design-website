@@ -82,7 +82,7 @@ const AboutPage = () => {
   );
 };
 
-const Main = styled.div`
+const Main = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
