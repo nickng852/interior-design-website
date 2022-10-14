@@ -20,7 +20,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ParallaxProvider>
         <GlobalStyle />
         <ScrollToTop />
