@@ -1,22 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Aos from "aos";
 
 import ParallaxBanner from "../components/ParallaxBanner";
 import { ActionButton } from "../components/buttons/ActionButton";
-import bgImage from "../assets/images/woodshelf/pexels-max-vakhtbovych-6782579 (1).jpg";
+
+import bgImage from "../assets/images/Parallax.jpg";
+import bannerImage from "../assets/images/pexels-max-vakhtbovych-6782579 (1).jpg";
 
 const AboutPage = () => {
+  let pageRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     Aos.init({ once: true });
   }, []);
 
+  const scrollDown = () => {
+    pageRef?.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Main>
-      <ParallaxBanner />
+      <ParallaxBanner bgImage={bgImage} title="About" onClick={scrollDown} />
 
       <SectionWrapper
+        ref={pageRef}
         data-aos="fade"
         data-aos-duration="1000"
         data-aos-delay="500"
@@ -71,7 +82,7 @@ const AboutPage = () => {
             </Desc>
           </DescWrapper>
 
-          <img src={bgImage} />
+          <img src={bannerImage} />
         </ContentWrapper>
 
         <Link to="/contact">
@@ -160,37 +171,6 @@ const Line = styled.div`
   }
 `;
 
-const Desc = styled.div`
-  width: 100%;
-  font-size: 0.7rem;
-  font-weight: 200;
-  letter-spacing: 0.5px;
-  line-height: 1.75;
-  text-align: justify;
-
-  @media (min-width: 768px) {
-    line-height: 2;
-    font-size: 0.75rem;
-  }
-
-  @media (min-width: 992px) {
-    font-size: 0.85rem;
-  }
-`;
-
-const DescWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  gap: 1.8rem;
-
-  @media (min-width: 1200px) {
-    gap: 2rem;
-  }
-`;
-
 const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -214,6 +194,37 @@ const ContentWrapper = styled.div`
 
   @media (min-width: 1200px) {
     gap: 3.5rem;
+  }
+`;
+
+const DescWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.8rem;
+
+  @media (min-width: 1200px) {
+    gap: 2rem;
+  }
+`;
+
+const Desc = styled.div`
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  line-height: 1.75;
+  text-align: justify;
+
+  @media (min-width: 768px) {
+    line-height: 2;
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 0.85rem;
   }
 `;
 

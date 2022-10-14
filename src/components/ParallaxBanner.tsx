@@ -1,16 +1,58 @@
-import React from "react";
-import styled from "styled-components";
-
+import React, { FC, useRef, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
+import { gsap } from "gsap";
 import { Parallax } from "react-parallax";
-import bgImage from "../assets/images/Parallax(1).jpg";
 
-const ParallaxBanner = () => (
-  <ParallaxImg bgImage={bgImage} bgImageAlt="" strength={300}>
-    <Wrapper>
-      <ParallaxTitle>About</ParallaxTitle>
-    </Wrapper>
-  </ParallaxImg>
-);
+interface Props {
+  bgImage: string;
+  title: string;
+  onClick: () => void;
+}
+
+const ParallaxBanner: FC<Props> = ({ bgImage, title, onClick }) => {
+  let headingRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    gsap.to(headingRef.current, {
+      y: -10,
+      opacity: 1,
+      duration: 1,
+      delay: 0.5,
+      ease: "power3.easeOut",
+    });
+  }, []);
+
+  return (
+    <>
+      <ParallaxImg bgImage={bgImage} bgImageAlt={title} strength={300}>
+        <Wrapper>
+          <ParallaxTitle>
+            <p ref={headingRef}>{title}</p>
+          </ParallaxTitle>
+        </Wrapper>
+      </ParallaxImg>
+
+      <Arrow onClick={onClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={0.5}
+          stroke="currentColor"
+          data-aos="fade"
+          data-aos-duration="1500"
+          data-aos-delay="500"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </Arrow>
+    </>
+  );
+};
 
 const ParallaxImg = styled(Parallax)`
   display: flex;
@@ -29,16 +71,80 @@ const Wrapper = styled.div`
 `;
 
 const ParallaxTitle = styled.div`
-  font-family: "Poppins", san-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #fff;
-  cursor: default;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.5px;
   user-select: none;
+  z-index: 2;
+
+  p {
+    font-size: 1.2rem;
+    opacity: 0;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 1.7rem;
+    }
+  }
+`;
+
+const arrowAnimation = keyframes`
+  0% {
+    bottom: 2%;
+  }
+
+  30% {
+    bottom: 0%;
+  }
+
+  65% {
+    bottom: 2%;
+  }
+
+  100% {
+    bottom: 2%;
+  }
+`;
+
+const Arrow = styled.div`
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+  padding: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  animation: ${arrowAnimation} 2.75s cubic-bezier(0.42, 0, 0.58, 1) infinite
+    forwards;
+  transition: all 0.4s ease;
+
+  svg {
+    width: 40px;
+    height: 40px;
+
+    @media (min-width: 768px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: 992px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 
   @media (min-width: 992px) {
-    font-size: 3rem;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -3%);
   }
 `;
 

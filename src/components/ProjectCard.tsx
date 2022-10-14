@@ -39,7 +39,7 @@ const ProjectCard: FC<Props> = ({ projects }) => {
               <Card key={index} data-aos="fade-up" data-aos-duration="1000">
                 <Link to={`/project/${project.id}`}>
                   <CardImgWrapper>
-                    <CardImg src={project.thumbnailImage} />
+                    <CardImg src={project.thumbnailImage} loading="lazy" />
                     <CardOverlay
                       data-aos="fade-right"
                       data-aos-duration="1250"
@@ -64,22 +64,10 @@ const Main = styled.section`
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 2rem 1rem;
-
-  @media (min-width: 768px) {
-    padding: 2.5rem 1rem;
-  }
-
-  @media (min-width: 992px) {
-    padding: 3rem 1rem;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 3.5rem 1rem;
-  }
 `;
 
 const Wrapper = styled.div`
+  padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,14 +78,17 @@ const Wrapper = styled.div`
   gap: 1rem;
 
   @media (min-width: 768px) {
+    padding: 2.5rem 1rem;
     gap: 1.5rem;
   }
 
   @media (min-width: 992px) {
+    padding: 3rem 1rem;
     gap: 2rem;
   }
 
   @media (min-width: 1200px) {
+    padding: 3.5rem 1rem;
     gap: 2.5rem;
   }
 `;
