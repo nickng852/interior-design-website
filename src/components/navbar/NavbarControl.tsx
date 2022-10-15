@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-import { IToggle } from "../../interfaces/toggle";
+import { INavbar } from "../../interfaces/navbar";
 
-const NavbarControl: FC<IToggle> = ({
+const NavbarControl: FC<INavbar> = ({
   isNavbarDark,
   navbarTransition,
   toggle,
@@ -16,7 +16,7 @@ const NavbarControl: FC<IToggle> = ({
   );
 };
 
-const Wrapper = styled.div<IToggle>`
+const Wrapper = styled.div<INavbar>`
   padding: 1rem;
   display: flex;
   align-items: center;

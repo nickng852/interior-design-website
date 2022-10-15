@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { IToggle } from "../../interfaces/toggle";
+import { INavbar } from "../../interfaces/navbar";
 
-const NavbarLogo: FC<IToggle> = ({
+const NavbarLogo: FC<INavbar> = ({
   isNavbarDark,
   navbarTransition,
   toggle,
@@ -26,7 +26,7 @@ const NavbarLogo: FC<IToggle> = ({
   );
 };
 
-const Logo = styled.div<IToggle>`
+const Logo = styled.div<INavbar>`
   font-family: "Jost", sans-serif;
   font-size: 1rem;
   color: ${({ isNavbarDark, toggle }) =>

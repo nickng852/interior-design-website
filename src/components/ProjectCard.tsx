@@ -3,25 +3,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Aos from "aos";
 
-type IProjects = {
-  id: string;
-  thumbnailImage: string;
-  showcaseImage1: string;
-  showcaseImage2: string;
-  showcaseImage3: string;
-  showcaseImage4: string;
-  showcaseImage5: string;
-  showcaseImage6: string;
-  showcaseImage7: string;
-  title: string;
-  description: string;
-}[];
+import { IProjects } from "../interfaces/project";
 
-interface Props {
-  projects: IProjects;
-}
-
-const ProjectCard: FC<Props> = ({ projects }) => {
+const ProjectCard: FC<IProjects> = ({ projects }) => {
   useEffect(() => {
     Aos.init({ once: true });
   }, []);

@@ -17,7 +17,7 @@ const ParallaxBanner: FC<Props> = ({ bgImage, title, onClick }) => {
       y: -10,
       opacity: 1,
       duration: 1,
-      delay: 0.5,
+      delay: 0.3,
       ease: "power3.easeOut",
     });
   }, []);

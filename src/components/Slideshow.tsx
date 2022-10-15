@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from "react";
+import React, { FC, useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
 // import Swiper core and required modules
@@ -26,8 +26,8 @@ interface Props {
 }
 
 const Slideshow: FC<Props> = ({ slides }) => {
-  let heading1 = useRef(null);
-  let heading2 = useRef(null);
+  let heading1 = useRef<HTMLDivElement | null>(null);
+  let heading2 = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     gsap.to(heading1.current, {

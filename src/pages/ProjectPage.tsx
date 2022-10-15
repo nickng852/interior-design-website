@@ -1,17 +1,14 @@
-import React, { FC, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Aos from "aos";
 
 import { projects } from "../components/ProjectCardData";
-
-import { IProjects } from "../interfaces/project";
-
 import ParallaxBanner from "../components/ParallaxBanner";
 
-const ProjectPage: FC<IProjects> = () => {
-  const { id } = useParams();
+const ProjectPage = () => {
   let pageRef = useRef<HTMLDivElement | null>(null);
+  const { id } = useParams();
 
   useEffect(() => {
     Aos.init({ once: true });
@@ -94,100 +91,6 @@ const Main = styled.section`
   flex-direction: column;
 `;
 
-const ProjectBackground = styled.div`
-  width: 100%;
-  height: 100vh;
-
-  img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
-const ProjectTitle = styled.div`
-  position: absolute;
-  top: 47.5%;
-  left: 50%;
-  transform: translate(-50%, -47.5%);
-  font-family: "Jost", sans-serif;
-  font-weight: 300;
-  color: #ffffff;
-  letter-spacing: -0.5px;
-  user-select: none;
-  z-index: 2;
-
-  p {
-    font-size: 1.2rem;
-    opacity: 0;
-
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
-
-    @media (min-width: 992px) {
-      font-size: 1.6rem;
-    }
-
-    @media (min-width: 1200px) {
-      font-size: 1.7rem;
-    }
-  }
-`;
-
-const arrowAnimation = keyframes`
-  0% {
-    bottom: 2%;
-  }
-
-  30% {
-    bottom: 0%;
-  }
-
-  65% {
-    bottom: 2%;
-  }
-
-  100% {
-    bottom: 2%;
-  }
-`;
-
-const Arrow = styled.div`
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
-  transform: translate(-50%, -2%);
-  padding: 1rem;
-  color: #ffffff;
-  cursor: pointer;
-  animation: ${arrowAnimation} 2.75s cubic-bezier(0.42, 0, 0.58, 1) infinite
-    forwards;
-  transition: all 0.4s ease;
-
-  svg {
-    width: 40px;
-    height: 40px;
-
-    @media (min-width: 768px) {
-      width: 50px;
-      height: 50px;
-    }
-
-    @media (min-width: 992px) {
-      width: 60px;
-      height: 60px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, -3%);
-  }
-`;
-
 const ProjectInfo = styled.div`
   padding: 2.5rem 1rem;
   display: flex;
@@ -232,6 +135,60 @@ const InfoWrapper = styled.div`
   @media (min-width: 1200px) {
     flex-direction: row;
     gap: 2.5rem;
+  }
+`;
+
+const ProjectDesc = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  h6 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 0.65rem;
+    font-weight: 200;
+    line-height: 2;
+    letter-spacing: 0.5px;
+  }
+
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+`;
+
+const ProjectImage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    img {
+      height: 500px;
+    }
   }
 `;
 
@@ -291,60 +248,6 @@ const FrontImage = styled.img`
     left: 45%;
     width: 300px;
     height: 350px;
-  }
-`;
-
-const ProjectDesc = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-
-  h6 {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  p {
-    font-size: 0.65rem;
-    font-weight: 200;
-    line-height: 2;
-    letter-spacing: 0.5px;
-  }
-
-  @media (min-width: 768px) {
-    h6 {
-      font-size: 1.25rem;
-    }
-
-    p {
-      font-size: 0.85rem;
-    }
-  }
-`;
-
-const ProjectImage = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  @media (min-width: 768px) {
-    img {
-      height: 400px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    img {
-      height: 500px;
-    }
   }
 `;
 

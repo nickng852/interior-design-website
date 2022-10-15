@@ -2,13 +2,13 @@ import React, { FC, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import { IToggle } from "../../interfaces/toggle";
+import { INavbar } from "../../interfaces/navbar";
 
 import NavbarLogo from "./NavbarLogo";
 import NavbarControl from "./NavbarControl";
 import Sidebar from "./Sidebar";
 
-const Navbar: FC<IToggle> = ({ toggle, onClick }) => {
+const Navbar: FC<INavbar> = ({ toggle, onClick }) => {
   const [isNavbarDark, setIsNavbarDark] = useState<boolean>(false);
   const [navbarTransition, setNavbarTransition] = useState<boolean>(false);
   const { pathname } = useLocation();
@@ -24,7 +24,7 @@ const Navbar: FC<IToggle> = ({ toggle, onClick }) => {
   const changeNavbarStyle = () => {
     let w = window.innerHeight;
 
-    if (window.scrollY >= w) {
+    if (window.scrollY >= 0.8 * w) {
       setNavbarTransition(true);
     } else {
       setNavbarTransition(false);
@@ -54,7 +54,7 @@ const Navbar: FC<IToggle> = ({ toggle, onClick }) => {
   );
 };
 
-const Main = styled.section<IToggle>`
+const Main = styled.section<INavbar>`
   position: fixed;
   padding: 1rem;
   display: flex;

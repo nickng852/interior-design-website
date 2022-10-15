@@ -35,22 +35,6 @@ const Main = styled.section`
   }
 `;
 
-const Credit = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  font-family: "Jost", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 200;
-  letter-spacing: 0.025rem;
-
-  @media (min-width: 992px) {
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
-`;
-
 const SocialMediaWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -77,6 +61,22 @@ const SocialMedia = styled.div`
 
   @media (min-width: 992px) {
     font-size: 1.5rem;
+  }
+`;
+
+const Credit = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: "Jost", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 0.025rem;
+
+  @media (min-width: 992px) {
+    font-size: 0.9rem;
+    font-weight: 300;
   }
 `;
 
