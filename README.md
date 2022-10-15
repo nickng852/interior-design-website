@@ -55,9 +55,9 @@ npm run dev
 
 ## Screenshot
 
-<img src="/public/screenshot1.png"></img>
-<img src="/public/screenshot2.png"></img>
-<img src="/public/screenshot3.png"></img>
-<img src="/public/screenshot4.png"></img>
+<img src="/public/screenshot-1.png"></img>
+<img src="/public/screenshot-2.png"></img>
+<img src="/public/screenshot-3.png"></img>
+<img src="/public/screenshot-4.png"></img>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
