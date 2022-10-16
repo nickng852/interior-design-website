@@ -205,6 +205,7 @@ const Form = styled.form`
     background-color: #f4f4f4;
     border-radius: 8px;
     font-family: "Jost", sans-serif;
+    font-weight: 300;
     color: #000000;
   }
 

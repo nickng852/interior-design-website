@@ -79,26 +79,26 @@ const ParallaxTitle = styled.div`
   z-index: 2;
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0;
 
     @media (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     @media (min-width: 992px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     @media (min-width: 1200px) {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
   }
 `;
 
 const arrowAnimation = keyframes`
   0% {
-    bottom: 2%;
+    bottom: 1.5%;
   }
 
   30% {
@@ -106,19 +106,19 @@ const arrowAnimation = keyframes`
   }
 
   65% {
-    bottom: 2%;
+    bottom: 1.5%;
   }
 
   100% {
-    bottom: 2%;
+    bottom: 1.5%;
   }
 `;
 
 const Arrow = styled.div`
   position: absolute;
-  bottom: 2%;
+  bottom: 1.5%;
   left: 50%;
-  transform: translate(-50%, -2%);
+  transform: translate(-50%, -1.5%);
   padding: 1rem;
   color: #ffffff;
   cursor: pointer;
@@ -139,12 +139,6 @@ const Arrow = styled.div`
       width: 60px;
       height: 60px;
     }
-  }
-
-  @media (min-width: 992px) {
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, -3%);
   }
 `;
 

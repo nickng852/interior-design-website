@@ -144,23 +144,26 @@ const ProjectDesc = styled.div`
   flex-direction: column;
   gap: 0.8rem;
 
-  h6 {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
   p {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 200;
     line-height: 2;
     letter-spacing: 0.5px;
   }
 
   @media (min-width: 768px) {
-    h6 {
-      font-size: 1.25rem;
+    p {
+      font-size: 0.75rem;
     }
+  }
 
+  @media (min-width: 992px) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
     p {
       font-size: 0.85rem;
     }

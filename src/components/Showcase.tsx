@@ -117,20 +117,20 @@ const SectionTitle = styled.div`
 
   p {
     font-family: "Playfair Display", serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #353b48;
     text-align: center;
 
     @media (min-width: 768px) {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     @media (min-width: 992px) {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     @media (min-width: 1200px) {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
     }
   }
 `;

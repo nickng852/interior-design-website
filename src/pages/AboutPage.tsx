@@ -136,8 +136,14 @@ const Title = styled.div`
   gap: 1.25rem;
 
   h1 {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 300;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 1rem;
+    }
   }
 
   @media (min-width: 992px) {
@@ -212,18 +218,22 @@ const DescWrapper = styled.div`
 
 const Desc = styled.div`
   width: 100%;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 200;
   letter-spacing: 0.5px;
-  line-height: 1.75;
+  line-height: 2;
   text-align: justify;
 
   @media (min-width: 768px) {
-    line-height: 2;
+    line-height: 2.25;
     font-size: 0.75rem;
   }
 
   @media (min-width: 992px) {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 1200px) {
     font-size: 0.85rem;
   }
 `;
